@@ -29,7 +29,7 @@ pm_buttons = [
     ],
     [InlineKeyboardButton(text="• اوامࢪ التشغيل •", callback_data="fallen_help")],
     [
-        InlineKeyboardButton(text="• سوࢪس القرش •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• سوࢪس العقرب •", url=config.SUPPORT_CHANNEL),
         InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
     ],
     [
@@ -49,7 +49,7 @@ gp_buttons = [
         )
     ],
     [
-        InlineKeyboardButton(text="• سوࢪس القرش •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• سوࢪس العقرب •", url=config.SUPPORT_CHANNEL),
         InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
     ],
     [
