@@ -10,7 +10,7 @@ from youtube_search import YoutubeSearch
 from FallenMusic import BOT_MENTION, BOT_USERNAME, LOGGER, app
 
 
-@app.on_message(filters.command(["song", "vsong", "video", "music"]) | filters.command(["تحميل","فيديو","صوت"],prefixes= ["/", "!","","#"]))
+@app.on_message(filters.command(["song", "vsong", "video", "music"]) | filters.command(["تحميل","فيديو","يوت"],prefixes= ["/", "!","","#"]))
 async def song(_, message: Message):
     try:
         await message.delete()
@@ -36,13 +36,13 @@ async def song(_, message: Message):
             f"فشل إحضار المسار من ʏᴛ-ᴅʟ.\n\n**السبب :** `{ex}`"
         )
 
-    await m.edit_text("✎┊‌ جارٍ التحميل انتظر,\n\n✎┊‌ بواسطه ‌SHARK..")
+    await m.edit_text("✎┊‌ جارٍ التحميل انتظر,\n\n✎┊‌ بواسطة ‌العقرب..")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"✎┊‌ **العنوان :** [{title[:23]}]({link})\n✎┊‌ **المده :** `{duration}`\n✎┊‌ ** بواسطة :** {BOT_MENTION}"
+        rep = f"✎┊‌ **العنوان :** [{title[:23]}]({link})\n✎┊‌ **المدة :** `{duration}`\n✎┊‌ ** بواسطة :** {BOT_MENTION}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
